@@ -583,11 +583,7 @@ export function Settings() {
   const accessStore = useAccessStore();
   const shouldHideBalanceQuery = useMemo(() => {
     const isOpenAiUrl = accessStore.openaiUrl.includes(OPENAI_BASE_URL);
-    return (
-      accessStore.hideBalanceQuery ||
-      isOpenAiUrl ||
-      accessStore.provider === ServiceProvider.Azure
-    );
+    return accessStore.hideBalanceQuery || isOpenAiUrl;
   }, [
     accessStore.hideBalanceQuery,
     accessStore.openaiUrl,

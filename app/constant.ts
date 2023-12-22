@@ -8,9 +8,9 @@ export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/c
 export const FETCH_TAG_URL = `https://api.github.com/repos/${OWNER}/${REPO}/tags?per_page=1`;
 export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
 
-export const DEFAULT_CORS_HOST = "https://www.geminifreechat.com";
+export const DEFAULT_CORS_HOST = "https://www.gemini-chat.pro";
 export const DEFAULT_API_HOST = `${DEFAULT_CORS_HOST}/api/proxy`;
-export const OPENAI_BASE_URL = "https://api.geminifreechat.com";
+export const OPENAI_BASE_URL = "https://api.gemini-chat.pro";
 
 export enum Path {
   Home = "/",
@@ -65,7 +65,7 @@ export const EXPORT_MESSAGE_CLASS_NAME = "export-markdown";
 export enum ServiceProvider {
   // OpenAI = "OpenAI",
   // Azure = "Azure",
-  GeminiFreeChat = "GeminiFreeChat",
+  Gemini = "Gemini",
 }
 
 export const OpenaiPath = {
@@ -76,7 +76,7 @@ export const OpenaiPath = {
 };
 
 export const Azure = {
-  ExampleEndpoint: "https://api.geminifreechat.com",
+  ExampleEndpoint: "https://api.gemini-chat.pro",
 };
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
@@ -130,7 +130,7 @@ export const DEFAULT_MODELS = [
   //   available: true,
   // },
   // {
-  //   name: "gpt-3.5-turbo",
+  //   name: "gemini-pro",
   //   available: true,
   // },
   // {
