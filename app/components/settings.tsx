@@ -635,7 +635,8 @@ export function Settings() {
         navigate(Path.Home);
       }
     };
-    if (clientConfig?.isApp) { // Force to set custom endpoint to true if it's app
+    if (clientConfig?.isApp) {
+      // Force to set custom endpoint to true if it's app
       accessStore.update((state) => {
         state.useCustomConfig = true;
       });
@@ -893,7 +894,7 @@ export function Settings() {
           </ListItem>
         </List>
 
-        <List id={SlotID.CustomModel}>
+        {/* <List id={SlotID.CustomModel}>
           {showAccessCode && (
             <ListItem
               title={Locale.Settings.Access.AccessCode.Title}
@@ -1103,7 +1104,7 @@ export function Settings() {
               }
             ></input>
           </ListItem>
-        </List>
+        </List> */}
 
         <List>
           <ModelConfigList

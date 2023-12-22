@@ -11,7 +11,7 @@ const es: PartialLocaleType = {
     ChatItemCount: (count: number) => `${count} mensajes`,
   },
   Chat: {
-    SubTitle: (count: number) => `${count} mensajes con ChatGPT`,
+    SubTitle: (count: number) => `${count} mensajes con Gemini`,
     Actions: {
       ChatList: "Ir a la lista de chats",
       CompressedHistory: "Historial de memoria comprimido",
@@ -41,7 +41,7 @@ const es: PartialLocaleType = {
     Copy: "Copiar todo",
     Download: "Descargar",
     MessageFromYou: "Mensaje de ti",
-    MessageFromChatGPT: "Mensaje de ChatGPT",
+    MessageFromChatGPT: "Mensaje de Gemini",
   },
   Memory: {
     Title: "Historial de memoria",
@@ -74,7 +74,7 @@ const es: PartialLocaleType = {
     InjectSystemPrompts: {
       Title: "Inyectar Prompts del Sistema",
       SubTitle:
-        "Agregar forzosamente un prompt de sistema simulado de ChatGPT al comienzo de la lista de mensajes en cada solicitud",
+        "Agregar forzosamente un prompt de sistema simulado de Gemini al comienzo de la lista de mensajes en cada solicitud",
     },
     Update: {
       Version: (x: string) => `Versión: ${x}`,

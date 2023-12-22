@@ -86,7 +86,7 @@ const cn = {
     Download: "下载文件",
     Share: "分享到 ShareGPT",
     MessageFromYou: "用户",
-    MessageFromChatGPT: "ChatGPT",
+    MessageFromChatGPT: "Gemini",
     Format: {
       Title: "导出格式",
       SubTitle: "可以导出 Markdown 文本或者 PNG 图片",
@@ -153,7 +153,7 @@ const cn = {
     },
     InjectSystemPrompts: {
       Title: "注入系统级提示信息",
-      SubTitle: "强制给每次请求的消息列表开头添加一个模拟 ChatGPT 的系统提示",
+      SubTitle: "强制给每次请求的消息列表开头添加一个模拟 Gemini 的系统提示",
     },
     InputTemplate: {
       Title: "用户输入预处理",
@@ -441,9 +441,9 @@ const cn = {
     Config: "配置",
   },
   Exporter: {
-    Description : {
-      Title: "只有清除上下文之后的消息会被展示"
-    },  
+    Description: {
+      Title: "只有清除上下文之后的消息会被展示",
+    },
     Model: "模型",
     Messages: "消息",
     Topic: "主题",

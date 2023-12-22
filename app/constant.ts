@@ -1,5 +1,5 @@
-export const OWNER = "Yidadaa";
-export const REPO = "ChatGPT-Next-Web";
+export const OWNER = "blacksev";
+export const REPO = "Gemini-Next-Web";
 export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
@@ -8,9 +8,9 @@ export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/c
 export const FETCH_TAG_URL = `https://api.github.com/repos/${OWNER}/${REPO}/tags?per_page=1`;
 export const RUNTIME_CONFIG_DOM = "danger-runtime-config";
 
-export const DEFAULT_CORS_HOST = "https://a.nextweb.fun";
+export const DEFAULT_CORS_HOST = "https://www.geminifreechat.com";
 export const DEFAULT_API_HOST = `${DEFAULT_CORS_HOST}/api/proxy`;
-export const OPENAI_BASE_URL = "https://api.openai.com";
+export const OPENAI_BASE_URL = "https://api.geminifreechat.com";
 
 export enum Path {
   Home = "/",
@@ -56,15 +56,16 @@ export const ACCESS_CODE_PREFIX = "nk-";
 export const LAST_INPUT_KEY = "last-input";
 export const UNFINISHED_INPUT = (id: string) => "unfinished-input-" + id;
 
-export const STORAGE_KEY = "chatgpt-next-web";
+export const STORAGE_KEY = "gemini-next-web";
 
 export const REQUEST_TIMEOUT_MS = 60000;
 
 export const EXPORT_MESSAGE_CLASS_NAME = "export-markdown";
 
 export enum ServiceProvider {
-  OpenAI = "OpenAI",
-  Azure = "Azure",
+  // OpenAI = "OpenAI",
+  // Azure = "Azure",
+  GeminiFreeChat = "GeminiFreeChat",
 }
 
 export const OpenaiPath = {
@@ -75,20 +76,19 @@ export const OpenaiPath = {
 };
 
 export const Azure = {
-  ExampleEndpoint: "https://{resource-url}/openai/deployments/{deploy-id}",
+  ExampleEndpoint: "https://api.geminifreechat.com",
 };
 
 export const DEFAULT_INPUT_TEMPLATE = `{{input}}`; // input / time / model / lang
 export const DEFAULT_SYSTEM_TEMPLATE = `
-You are ChatGPT, a large language model trained by OpenAI.
-Knowledge cutoff: {{cutoff}}
+You are Gimini, a large language model trained by Google.
 Current model: {{model}}
 Current time: {{time}}
 Latex inline: $x^2$ 
 Latex block: $$e=mc^2$$
 `;
 
-export const SUMMARIZE_MODEL = "gpt-3.5-turbo";
+export const SUMMARIZE_MODEL = "gemini-pro";
 
 export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
@@ -98,61 +98,61 @@ export const KnowledgeCutOffDate: Record<string, string> = {
 
 export const DEFAULT_MODELS = [
   {
-    name: "gpt-4",
+    name: "gemini-pro",
     available: true,
   },
-  {
-    name: "gpt-4-0314",
-    available: true,
-  },
-  {
-    name: "gpt-4-0613",
-    available: true,
-  },
-  {
-    name: "gpt-4-32k",
-    available: true,
-  },
-  {
-    name: "gpt-4-32k-0314",
-    available: true,
-  },
-  {
-    name: "gpt-4-32k-0613",
-    available: true,
-  },
-  {
-    name: "gpt-4-1106-preview",
-    available: true,
-  },
-  {
-    name: "gpt-4-vision-preview",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-0301",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-0613",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-1106",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-16k",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-16k-0613",
-    available: true,
-  },
+  // {
+  //   name: "gpt-4-0314",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-4-0613",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-4-32k",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-4-32k-0314",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-4-32k-0613",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-4-1106-preview",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-4-vision-preview",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-3.5-turbo",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-3.5-turbo-0301",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-3.5-turbo-0613",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-3.5-turbo-1106",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-3.5-turbo-16k",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-3.5-turbo-16k-0613",
+  //   available: true,
+  // },
 ] as const;
 
 export const CHAT_PAGE_SIZE = 15;
