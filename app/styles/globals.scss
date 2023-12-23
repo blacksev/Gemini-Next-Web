@@ -106,6 +106,7 @@ body {
   user-select: none;
   touch-action: pan-x pan-y;
   overflow: hidden;
+  flex-wrap: wrap;
 
   @media only screen and (max-width: 600px) {
     background-color: var(--second);
