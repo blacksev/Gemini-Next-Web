@@ -6,8 +6,8 @@ import { getClientConfig } from "./config/client";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gemini Chat Pro",
-  description: "Your personal Gemini Pro Chat Bot.",
+  title: "Gemini Free Chat",
+  description: "Your personal Gemini Pro Chat Bot for Free.",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#151515" },
   ],
   appleWebApp: {
-    title: "Gemini Chat Pro",
+    title: "Gemini Free Chat",
     statusBarStyle: "default",
   },
 };
