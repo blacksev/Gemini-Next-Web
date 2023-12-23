@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Locale from "./locales";
+import TagManager from "react-gtm-module";
 
 type Command = (param: string) => void;
 interface Commands {
@@ -30,6 +31,10 @@ export function useCommand(commands: Commands = {}) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams, commands]);
+
+  useEffect(() => {
+    TagManager.initialize({ gtmId: "GTM-WST5PCMK" });
+  }, []);
 }
 
 interface ChatCommands {

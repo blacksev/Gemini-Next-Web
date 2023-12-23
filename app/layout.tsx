@@ -1,12 +1,9 @@
-"use client";
 /* eslint-disable @next/next/no-page-custom-font */
 import "./styles/globals.scss";
 import "./styles/markdown.scss";
 import "./styles/highlight.scss";
 import { getClientConfig } from "./config/client";
 import { type Metadata } from "next";
-import { useEffect } from "react";
-import TagManager from "react-gtm-module";
 
 export const metadata: Metadata = {
   title: "Gemini Chat Pro",
@@ -32,9 +29,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    TagManager.initialize({ gtmId: "GTM-WST5PCMK" });
-  }, []);
   return (
     <html lang="en">
       <head>
