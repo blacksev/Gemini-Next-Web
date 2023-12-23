@@ -27,6 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+yarn.lock
 
 # vercel
 .vercel
@@ -38,6 +39,7 @@ dev
 
 .vscode
 .idea
+.history
 
 # docker-compose env files
 .env
