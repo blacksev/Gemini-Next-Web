@@ -11,6 +11,7 @@ import TagManager from "react-gtm-module";
 export const metadata: Metadata = {
   title: "Gemini Chat Pro",
   description: "Your personal Gemini Pro Chat Bot.",
+  keywords: "gemini, chat, bot, pro, chatbot",
   viewport: {
     width: "device-width",
     initialScale: 1,
