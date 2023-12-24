@@ -266,7 +266,7 @@ export const useChatStore = createPersistStore(
         get().summarizeSession();
       },
 
-      async onUserInput(content: string) {
+      async onUserInput(content: string, files: File[] = []) {
         const session = get().currentSession();
         const modelConfig = session.mask.modelConfig;
 

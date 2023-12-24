@@ -54,7 +54,7 @@ if ! command -v node >/dev/null || ! command -v git >/dev/null || ! command -v y
 fi
 
 # Clone the repository and install dependencies
-git clone https://github.com/Yidadaa/Gemini-Next-Web
+git clone https://github.com/blacksev/Gemini-Next-Web
 cd Gemini-Next-Web
 yarn install
 
