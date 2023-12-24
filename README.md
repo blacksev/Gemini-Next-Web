@@ -14,9 +14,9 @@ One-Click to get well-designed cross-platform Gemini web UI.
 [![MacOS][MacOS-image]][download-url]
 [![Linux][Linux-image]][download-url]
 
-[Web App](https://gemini-chat.pro/) / [Desktop App](https://github.com/blacksev/Gemini-Next-Web/releases) 
+[Web App](https://gemini-chat.pro/) / [Desktop App](https://github.com/blacksev/Gemini-Next-Web/releases) / [Telegram](https://t.me/+EqnFU-q52_IxYjA1)
 
-[网页版](https://gemini-chat.pro/) / [客户端](https://github.com/blacksev/Gemini-Next-Web/releases) / [反馈](https://github.com/blacksev/Gemini-Next-Web/issues)
+[网页版](https://gemini-chat.pro/) / [客户端](https://github.com/blacksev/Gemini-Next-Web/releases) / [反馈](https://github.com/blacksev/Gemini-Next-Web/issues) / [电报](https://t.me/+EqnFU-q52_IxYjA1)
 
 [web-url]: https://gemini-chat.pro/
 [download-url]: https://github.com/blacksev/Gemini-Next-Web/releases
