@@ -303,6 +303,9 @@ If you want to add a new translation, read this [document](./docs/translation.md
 
 [Buy Me a Coffee](https://www.buymeacoffee.com/blacksev)
 
+## Ads
+
+[zai.chat](https://zai.chat) The best ChatGPT Plus alternative and GPT4 API provider, only $6 per month.
 
 ### Contributor
 
