@@ -21,7 +21,7 @@ const DEFAULT_ACCESS_STATE = {
   provider: ServiceProvider.Gemini,
 
   // openai
-  openaiUrl: DEFAULT_OPENAI_URL,
+  openaiUrl: "",
   openaiApiKey: "",
 
   // azure
