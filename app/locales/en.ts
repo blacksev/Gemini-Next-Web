@@ -112,6 +112,9 @@ const en: LocaleType = {
     Latest: "Select Latest",
     Clear: "Clear",
   },
+  Gemini: {
+    SelectImgMax: (max: number) => `Select up to ${max} images`,
+  },
   Memory: {
     Title: "Memory Prompt",
     EmptyContent: "Nothing yet.",
@@ -443,8 +446,8 @@ const en: LocaleType = {
   },
   Exporter: {
     Description: {
-      Title: "Only messages after clearing the context will be displayed"
-    },  
+      Title: "Only messages after clearing the context will be displayed",
+    },
     Model: "Model",
     Messages: "Messages",
     Topic: "Topic",

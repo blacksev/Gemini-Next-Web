@@ -68,10 +68,32 @@ export class ChatGPTApi implements LLMApi {
   }
 
   async chat(options: ChatOptions) {
-    const messages = options.messages.map((v) => ({
-      role: v.role,
-      content: v.content,
-    }));
+    const messages = options.messages.map((v) => {
+      if (v.attachFiles && v.attachFiles.length > 0) {
+        const content = [];
+        for (const file of v.attachFiles) {
+          content.push({
+            type: "image_url",
+            image_url: {
+              url: file.base64,
+            },
+          });
+        }
+        content.push({
+          type: "text",
+          text: v.content,
+        });
+        return {
+          role: v.role,
+          content,
+        };
+      } else {
+        return {
+          role: v.role,
+          content: v.content,
+        };
+      }
+    });
 
     const modelConfig = {
       ...useAppConfig.getState().modelConfig,

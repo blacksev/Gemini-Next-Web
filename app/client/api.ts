@@ -1,6 +1,6 @@
 import { getClientConfig } from "../config/client";
 import { ACCESS_CODE_PREFIX, ServiceProvider } from "../constant";
-import { ChatMessage, ModelType, useAccessStore } from "../store";
+import { AttachFile, ChatMessage, ModelType, useAccessStore } from "../store";
 import { ChatGPTApi } from "./platforms/openai";
 
 export const ROLES = ["system", "user", "assistant"] as const;
@@ -9,9 +9,18 @@ export type MessageRole = (typeof ROLES)[number];
 export const Models = ["gemini-pro", "gpt-4"] as const;
 export type ChatModel = ModelType;
 
+export interface TypedContent {
+  type: "text" | "image_url";
+  text?: string;
+  image_url?: {
+    url: string;
+  };
+}
+
 export interface RequestMessage {
   role: MessageRole;
   content: string;
+  attachFiles?: AttachFile[];
 }
 
 export interface LLMConfig {

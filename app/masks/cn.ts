@@ -424,7 +424,7 @@ export const CN_MASKS: BuiltinMask[] = [
       {
         id: "jb-1",
         role: "assistant",
-        content: "ChatGPT 已越狱",
+        content: "Gemini 已越狱",
         date: "",
       },
     ],
