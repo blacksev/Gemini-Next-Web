@@ -25,7 +25,7 @@ One-Click to get well-designed cross-platform Gemini web UI.
 [MacOS-image]: https://img.shields.io/badge/-MacOS-black?logo=apple
 [Linux-image]: https://img.shields.io/badge/-Linux-333?logo=ubuntu
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fblacksev%2FGemini-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=gemini-next-web&repository-name=Gemini-Next-Web)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fblacksev%2FGemini-Next-Web&env=CODE&project-name=gemini-next-web&repository-name=Gemini-Next-Web)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/blacksev/Gemini-Next-Web)
 
@@ -37,7 +37,6 @@ One-Click to get well-designed cross-platform Gemini web UI.
 
 - **Deploy for free with one-click** on Vercel in under 1 minute
 - Compact client (~5MB) on Linux/Windows/MacOS, [download it now](https://github.com/blacksev/Gemini-Next-Web/releases)
-- Fully compatible with self-deployed LLMs, recommended for use with [RWKV-Runner](https://github.com/josStorer/RWKV-Runner) or [LocalAI](https://github.com/go-skynet/LocalAI)
 - Privacy first, all data is stored locally in the browser
 - Markdown support: LaTex, mermaid, code highlight, etc.
 - Responsive design, dark mode and PWA
@@ -90,20 +89,15 @@ One-Click to get well-designed cross-platform Gemini web UI.
 
 ## 最新动态
 
-- 🚀 v2.0 已经发布，现在你可以使用面具功能快速创建预制对话了！ 了解更多： [ChatGPT 提示词高阶技能：零次、一次和少样本提示](https://github.com/blacksev/Gemini-Next-Web/issues/138)。
-- 💡 想要更方便地随时随地使用本项目？可以试下这款桌面插件：https://github.com/mushan0x0/AI0x0.com
-- 🚀 v2.7 现在可以将会话分享为图片了，也可以分享到 ShareGPT 的在线链接。
-- 🚀 v2.8 发布了横跨 Linux/Windows/MacOS 的体积极小的客户端。
-- 🚀 v2.9.11 现在可以使用自定义 Azure 服务了。
+- 🚀 v1.0.0 支持Gemini Pro模型和Gemini Pro Vision，实现了stream对话和图片识别
 
 ## Get Started
 
 > [简体中文 > 如何开始使用](./README_CN.md#开始使用)
 
-1. Get [OpenAI API Key](https://platform.openai.com/account/api-keys);
-2. Click
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fblacksev%2FGemini-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=chatgpt-next-web&repository-name=ChatGPT-Next-Web), remember that `CODE` is your page password;
-3. Enjoy :)
+1. Click
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fblacksev%2FGemini-Next-Web&env=CODE&project-name=gemini-next-web&repository-name=Gemini-Next-Web), remember that `CODE` is your page password;
+2. Enjoy :)
 
 ## FAQ
 
