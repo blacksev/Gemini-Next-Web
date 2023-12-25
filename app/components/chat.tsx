@@ -49,6 +49,7 @@ import {
   useAppConfig,
   DEFAULT_TOPIC,
   ModelType,
+  AttachFile,
 } from "../store";
 
 import {
@@ -668,7 +669,7 @@ function _Chat() {
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const [userInput, setUserInput] = useState("");
-  const [useImages, setUseImages] = useState<any[]>([]);
+  const [useImages, setUseImages] = useState<AttachFile[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const { submitKey, shouldSubmit } = useSubmitHandler();
   const { scrollRef, setAutoScroll, scrollDomToBottom } = useScrollToBottom();
@@ -756,6 +757,7 @@ function _Chat() {
     localStorage.setItem(LAST_INPUT_KEY, userInput);
     setUserInput("");
     setPromptHints([]);
+    setUseImages([]);
     if (!isMobileScreen) inputRef.current?.focus();
     setAutoScroll(true);
   };
@@ -1185,6 +1187,15 @@ function _Chat() {
 
           const shouldShowClearContextDivider = i === clearContextIndex - 1;
 
+          let textContent: string = "";
+
+          if (message.attachFiles && message.attachFiles.length > 0) {
+            textContent += message.attachFiles
+              .map((f: AttachFile) => `![${f.filename}](${f.base64})\n`)
+              .join("");
+          }
+          if (message.content) textContent += message.content;
+
           return (
             <Fragment key={message.id}>
               <div
@@ -1279,7 +1290,7 @@ function _Chat() {
                   )}
                   <div className={styles["chat-message-item"]}>
                     <Markdown
-                      content={message.content}
+                      content={textContent}
                       loading={
                         (message.preview || message.streaming) &&
                         message.content.length === 0 &&
