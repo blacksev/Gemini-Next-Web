@@ -11,12 +11,17 @@ import {
   StoreKey,
   SUMMARIZE_MODEL,
 } from "../constant";
-import { api, RequestMessage } from "../client/api";
+import { api, RequestMessage, TypedContent } from "../client/api";
 import { ChatControllerPool } from "../client/controller";
 import { prettyObject } from "../utils/format";
 import { estimateTokenLength } from "../utils/token";
 import { nanoid } from "nanoid";
 import { createPersistStore } from "../utils/store";
+
+export type AttachFile = {
+  filename: string;
+  base64: string;
+};
 
 export type ChatMessage = RequestMessage & {
   date: string;
@@ -266,16 +271,18 @@ export const useChatStore = createPersistStore(
         get().summarizeSession();
       },
 
-      async onUserInput(content: string) {
+      async onUserInput(content: string, files: AttachFile[] = []) {
         const session = get().currentSession();
         const modelConfig = session.mask.modelConfig;
 
         const userContent = fillTemplateWith(content, modelConfig);
+
         console.log("[User Input] after template: ", userContent);
 
         const userMessage: ChatMessage = createMessage({
           role: "user",
           content: userContent,
+          attachFiles: files,
         });
 
         const botMessage: ChatMessage = createMessage({
@@ -286,7 +293,22 @@ export const useChatStore = createPersistStore(
 
         // get recent messages
         const recentMessages = get().getMessagesWithMemory();
-        const sendMessages = recentMessages.concat(userMessage);
+
+        let sendMessages: ChatMessage[];
+        const allFiles = recentMessages
+          .flatMap((m) => m.attachFiles ?? [])
+          .concat(files);
+        if (allFiles.length > 0) {
+          sendMessages = [
+            {
+              ...userMessage,
+              attachFiles: allFiles,
+            },
+          ];
+        } else {
+          sendMessages = recentMessages.concat(userMessage);
+        }
+
         const messageIndex = get().currentSession().messages.length + 1;
 
         // save user's and bot's message
