@@ -6,8 +6,9 @@ import { getClientConfig } from "./config/client";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gemini Chat Pro",
-  description: "Your personal Gemini Pro Chat Bot.",
+  title: "Gemini Chat Pro - Your personal Gemini Pro Chat Bot",
+  description:
+    "Gemini-Next-Web is the best open source and free chat bot powered by Google Gemini Pro and Gemini Pro Vision models. You can use it to chat with texts and images. All the data are stored in local and there is no need to register an account.",
   viewport: {
     width: "device-width",
     initialScale: 1,
