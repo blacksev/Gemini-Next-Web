@@ -8,7 +8,10 @@ import { type Metadata } from "next";
 export const metadata: Metadata = {
   title: "Gemini Chat Pro - Your personal Gemini Pro Chat Bot",
   description:
-    "Gemini-Next-Web is the best open source and free chat bot powered by Google Gemini Pro and Gemini Pro Vision models. You can use it to chat with texts and images. All the data are stored in local and there is no need to register an account.",
+    "Gemini Chat Pro is an open source Gemini Pro chat bot powered by Google Gemini AI models. You can use it to chat with texts and images for free.",
+  alternates: {
+    canonical: "https://gemini-chat.pro/",
+  },
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -21,6 +24,11 @@ export const metadata: Metadata = {
   appleWebApp: {
     title: "Gemini Chat Pro",
     statusBarStyle: "default",
+  },
+  applicationName: "Gemini Chat Pro",
+  robots: {
+    index: process.env.IS_PUBLIC === "true",
+    follow: process.env.IS_PUBLIC === "true",
   },
 };
 
